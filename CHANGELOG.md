@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.1.0...v1.2.0) (2024-11-19)
+
+
+### Features
+
+* add additional fixes for the boards plugin ([ba240c2](https://github.com/dy0gu/mattermost-plugin-freemium/commit/ba240c2030e1c71b5c33cfcec5e7278566caf0ca))
+
 ## [1.1.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.0.1...v1.1.0) (2024-11-19)
 
 
