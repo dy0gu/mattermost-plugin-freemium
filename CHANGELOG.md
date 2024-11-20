@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.2.0...v1.3.0) (2024-11-20)
+
+
+### Features
+
+* add new mobile related fixes ([23d2bc9](https://github.com/dy0gu/mattermost-plugin-freemium/commit/23d2bc91ef3ffd98d05864bf1a94bbc825295715))
+
 ## [1.2.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.1.0...v1.2.0) (2024-11-19)
 
 
