@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.4.0...v1.4.1) (2024-11-29)
+
+
+### Bug Fixes
+
+* improve board search dialog ([10d2738](https://github.com/dy0gu/mattermost-plugin-freemium/commit/10d2738fa7abbd3da658a72976ec6ea7e6c359ec))
+
 ## [1.4.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.3.0...v1.4.0) (2024-11-29)
 
 
