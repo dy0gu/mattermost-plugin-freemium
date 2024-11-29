@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.3.0...v1.4.0) (2024-11-29)
+
+
+### Features
+
+* add more board fixes ([6d16f90](https://github.com/dy0gu/mattermost-plugin-freemium/commit/6d16f90d11ccfac64c4e5e5b105f77b47bb40c60))
+
 ## [1.3.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.2.0...v1.3.0) (2024-11-20)
 
 
