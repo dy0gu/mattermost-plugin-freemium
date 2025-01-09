@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.4.1...v1.5.0) (2025-01-09)
+
+
+### Features
+
+* add button to return to channels in mobile boards page ([cf1d7da](https://github.com/dy0gu/mattermost-plugin-freemium/commit/cf1d7da9bcfc82cbbfe55e4ba6a75a4aabc610de))
+* improve project base for easier forking ([9f3370b](https://github.com/dy0gu/mattermost-plugin-freemium/commit/9f3370b758c27740a3b5fc1ba39ea53132cd201f))
+
+
+### Bug Fixes
+
+* add empty block explanation ([21f2bc8](https://github.com/dy0gu/mattermost-plugin-freemium/commit/21f2bc85bc4546baac79d83d4426f580f9bd6756))
+
 ## [1.4.1](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.4.0...v1.4.1) (2024-11-29)
 
 
