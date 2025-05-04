@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.5.0...v1.6.0) (2025-05-04)
+
+
+### Features
+
+* hide "view plans" button in the dashboard ([9c9db99](https://github.com/dy0gu/mattermost-plugin-freemium/commit/9c9db999ad0d580d6f296f5a010d733244379d33))
+
 ## [1.5.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.4.1...v1.5.0) (2025-01-09)
 
 
