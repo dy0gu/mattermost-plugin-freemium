@@ -37,3 +37,8 @@ div[role="dialog"]:has(> #StartTrialFormModal) {
 .footer-copyright {
 	display: none !important;
 }
+
+/* Hide the view plans button in the top right corner of the dashboard */
+#RightControlsContainer #UpgradeButton {
+	display: none;
+}
