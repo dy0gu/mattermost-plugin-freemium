@@ -40,5 +40,15 @@ div[role="dialog"]:has(> #StartTrialFormModal) {
 
 /* Hide the view plans button in the top right corner of the dashboard */
 #RightControlsContainer #UpgradeButton {
-	display: none;
+	display: none !important;
+}
+
+/* Hide the paid "User Groups" menu item in product switcher */
+#product-switcher-menu-dropdown #userGroups {
+	display: none !important;
+}
+
+/* Hide the premium setting to highlight keywords */
+#accountSettingsModal .section-min.isDisabled {
+	display: none !important;
 }

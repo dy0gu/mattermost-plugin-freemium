@@ -1,10 +1,10 @@
 import type { GlobalState } from "@mattermost/types/store";
-import type { PluginRegistry } from "~/types/mattermost";
 import type { Action, Store } from "redux";
 import manifest from "~/../../plugin.json";
 import boardsTS from "~/scripts/boards";
-import premiumCSS from "~/styles/premium.css?raw";
 import boardsCSS from "~/styles/boards.css?raw";
+import premiumCSS from "~/styles/premium.css?raw";
+import type { PluginRegistry } from "~/types/mattermost";
 
 // https://developers.mattermost.com/integrate/plugins/components/webapp
 declare global {

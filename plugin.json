@@ -1,17 +1,17 @@
 {
-    "name": "Freemium",
-    "id": "freemium",
-    "description": "Injects custom styling on the web UI to remove native enterprise branding and add other QOL improvements.",
-    "homepage_url": "https://github.com/dy0gu/mattermost-plugin-freemium",
-    "support_url": "https://github.com/dy0gu/mattermost-plugin-freemium/issues",
-    "icon_path": "resources/icon.svg",
-    "min_server_version": "9.11.0",
-    "webapp": {
-        "bundle_path": "web/plugin-umd.js"
-    },
-    "settings_schema": {
-        "header": "",
-        "footer": "",
-        "settings": []
-    }
+	"name": "Freemium",
+	"id": "freemium",
+	"description": "Injects custom styling on the web UI to remove native enterprise branding and add other QOL improvements.",
+	"homepage_url": "https://github.com/dy0gu/mattermost-plugin-freemium",
+	"support_url": "https://github.com/dy0gu/mattermost-plugin-freemium/issues",
+	"icon_path": "resources/icon.svg",
+	"min_server_version": "9.11.0",
+	"webapp": {
+		"bundle_path": "web/plugin-umd.js"
+	},
+	"settings_schema": {
+		"header": "",
+		"footer": "",
+		"settings": []
+	}
 }

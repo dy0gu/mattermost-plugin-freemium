@@ -2,7 +2,7 @@ name: mattermost
 
 services:
   mattermost:
-    image: mattermost/mattermost-team-edition:10.11.2
+    image: mattermost/mattermost-enterprise-edition:10.11.2
     restart: unless-stopped
     # has built in healthcheck so no need to specify one
     depends_on:
