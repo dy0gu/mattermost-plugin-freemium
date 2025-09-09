@@ -60,7 +60,7 @@ The build version is based on the `version.txt` file that automatically gets bum
     python build.py
     ```
 
-  - The resulting `tar.gz` file is in the format accepted by Mattermost.
+  - The resulting `tar.gz` file is in the format accepted by Mattermost. You can use the provided `docker-compose.yaml` file to quickly spin up a local Mattermost instance for testing. It is self-contained and requires no additional configuration.
 
 - ### Tools 🧰
 
