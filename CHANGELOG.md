@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.6.0...v1.7.0) (2025-09-09)
+
+
+### Features
+
+* hide new elements pointed out by [#21](https://github.com/dy0gu/mattermost-plugin-freemium/issues/21) ([b965871](https://github.com/dy0gu/mattermost-plugin-freemium/commit/b965871fff0f10e72de5f529a303fb8ffa87b6a1))
+
 ## [1.6.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.5.0...v1.6.0) (2025-05-04)
 
 
