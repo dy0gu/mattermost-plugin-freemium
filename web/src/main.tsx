@@ -15,7 +15,10 @@ declare global {
 
 // https://developers.mattermost.com/integrate/reference/webapp/webapp-reference
 class Plugin {
-	public initialize(registry: PluginRegistry, _store: Store<GlobalState, Action<string>>) {
+	public initialize(
+		registry: PluginRegistry,
+		_store: Store<GlobalState, Action<string>>,
+	) {
 		// CSS INJECTION
 		const style = document.createElement("style");
 		style.textContent = [

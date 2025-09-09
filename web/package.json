@@ -13,12 +13,12 @@
 		"redux": "5.0.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.2.3",
 		"@mattermost/types": "10.3.0",
-		"@types/node": "^22.10.5",
-		"@types/react": "^18.3.0",
-		"typescript": "^5.7.3",
-		"vite": "^6.3.4",
-		"vite-tsconfig-paths": "^5.1.4"
+		"@types/node": "22.10.5",
+		"@types/react": "18.3.0",
+		"typescript": "5.7.3",
+		"vite": "6.3.4",
+		"vite-tsconfig-paths": "5.1.4"
 	}
 }

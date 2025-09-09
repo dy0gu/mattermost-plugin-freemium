@@ -1,7 +1,12 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
-	"organizeImports": {
-		"enabled": true
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
 	},
 	"files": {
 		"ignoreUnknown": true
@@ -14,41 +19,17 @@
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
-		"lineWidth": 120
+		"lineWidth": 80
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true,
-			"complexity": {
-				"noVoid": "error",
-				"useSimplifiedLogicExpression": "error"
-			},
-			"correctness": {
-				"useHookAtTopLevel": "error"
-			},
-			"style": {
-				"useNamingConvention": {
-					"level": "error",
-					"options": {
-						"strictCase": false,
-						"requireAscii": true
-					}
-				},
-				"useFilenamingConvention": {
-					"level": "error",
-					"options": {
-						"strictCase": true,
-						"requireAscii": true,
-						"filenameCases": ["kebab-case"]
-					}
-				}
-			},
-			"suspicious": {
-				"useAwait": "error",
-				"noConsole": "error",
-				"noEmptyBlockStatements": "error"
-			}
+			"recommended": true
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
 		}
 	}
 }

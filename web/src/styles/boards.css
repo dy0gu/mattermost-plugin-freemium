@@ -67,7 +67,11 @@
 		gap: 15px;
 	}
 
-	.focalboard-body .ShareBoardDialog .tabs-content .tabs-inputs .input-container {
+	.focalboard-body
+		.ShareBoardDialog
+		.tabs-content
+		.tabs-inputs
+		.input-container {
 		width: 100% !important;
 	}
 
