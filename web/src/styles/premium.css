@@ -1,5 +1,6 @@
 /* Hide the Mattermost name, icon and free label tag from the home page */
-[class^="ProductBrandingTeamEditionContainer"] {
+[class^="ProductBrandingTeamEditionContainer"],
+[class^="ProductBrandingFreeEditionContainer"] {
 	display: none !important;
 }
 
@@ -20,11 +21,6 @@ li.menu-divider:has(+ #startTrial) {
 
 /* Hide the free trial banner / upgrade card in the admin console license page */
 .admin-console__banner_section:has(.AlertBanner.info.AlertBanner--sys) {
-	display: none !important;
-}
-
-/* Hide the TeamEditionRightPanel card in the right panel of the admin console license page */
-.right-panel:has(> .panel-card + .compare-plans-text) {
 	display: none !important;
 }
 

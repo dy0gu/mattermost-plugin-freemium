@@ -23,12 +23,12 @@ Feel free to raise issues for any areas you think the plugin should address but 
 
 The plugin has been tested with the following versions:
 
-- **9.11.x**
 - **10.x**
+- **11.x**
 
-Note that it should work with versions earlier than **9.11.0**, though this was the one where the new branding changes were introduced.
+Any new version is likely also compatible out of the box and will be incrementally supported while attempting to maintaining fixes for earlier releases.
 
-Any new version is also likely compatible out of the box and will be incrementally supported while attempting to maintaining fixes for earlier releases.
+Both the `team` and `enterprise` docker images should work with the plugin.
 
 ## Development 🛠️
 
@@ -36,7 +36,9 @@ See below for setting up a local workspace to work on the plugin, this section i
 
 The project structure here consists of a highly modified and optimized version of the [mattermost-plugin-starter-template](https://github.com/mattermost/mattermost-plugin-starter-template). Testing and development workflows have been removed to preserve plugin simplicity. **This means the plugin must be rebuilt and manually uploaded into a Mattermost instance anytime you want to test it**.
 
-The build version is based on the `version.txt` file that automatically gets bumped by the CI pipeline when a release is made.
+The plugin build version will be based on the `version.txt` file that automatically gets bumped by the CI pipeline when a release is made.
+
+A `docker-compose.yaml` file is provided to quickly spin up two (`team` and `enterprise`) local Mattermost instances for testing. It is self-contained with dummy environment variables already set and usually requires no additional configuration.
 
 - ### Requirements 📋
 
@@ -47,10 +49,19 @@ The build version is based on the `version.txt` file that automatically gets bum
 - ### Getting Started 🏁
 
   - Clone this repository.
+
   - Refer to each folder for instructions on that particular module.
 
     - [api](api/README.md)
     - [web](web/README.md)
+
+  - Start instances for testing the plugin upload, using the provided `docker-compose.yaml` file:
+
+    ```shell
+    docker compose up --force-recreate
+    ```
+
+    The enterprise edition instance will be available at `http://localhost:8065` and the team edition at `http://localhost:8066`.
 
 - ### Build 📦
 

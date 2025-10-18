@@ -1,47 +1,65 @@
 name: mattermost
 
+x-instance-base: &mattermost-base
+  restart: unless-stopped
+  depends_on:
+    postgres:
+      condition: service_healthy
+  ports:
+    - 8065:8065
+  volumes:
+    - config:/mattermost/config
+    - data:/mattermost/data
+    - logs:/mattermost/logs
+    - plugins:/mattermost/plugins
+    - client:/mattermost/client/plugins
+    - indexes:/mattermost/bleve-indexes
+
+x-common-env: &mattermost-common-env
+  TZ: Europe/Lisbon
+  MM_SQLSETTINGS_DRIVERNAME: postgres
+  MM_SQLSETTINGS_DATASOURCE: postgres://example:example@postgres:5432/example?sslmode=disable&connect_timeout=10
+  MM_TEAMSETTINGS_SITENAME: Example
+  MM_TEAMSETTINGS_CUSTOMDESCRIPTIONTEXT: Welcome to the extension testing instance!
+  MM_TEAMSETTINGS_ENABLECUSTOMBRAND: true
+  MM_SUPPORTSETTINGS_HELPLINK: ""
+  MM_SERVICESETTINGS_ENABLEDESKTOPLANDINGPAGE: false
+  MM_PLUGINSETTINGS_ENABLEUPLOADS: true
+  MM_PLUGINSETTINGS_AUTOMATICPREPACKAGEDPLUGINS: false
+  MM_BLEVESETTINGS_ENABLEINDEXING: false
+  MM_BLEVESETTINGS_ENABLESEARCHING: false
+  MM_BLEVESETTINGS_ENABLEAUTOCOMPLETE: false
+  MM_TEAMSETTINGS_ENABLEJOINLEAVEMESSAGEBYDEFAULT: false
+  MM_TEAMSETTINGS_TEAMMATENAMEDISPLAY: nickname_full_name
+  MM_EMAILSETTINGS_SKIPSERVERCERTIFICATEVERIFICATION: false
+  MM_METRICSSETTINGS_ENABLENOTIFICATIONMETRICS: false
+  MM_LOGSETTINGS_ENABLEDIAGNOSTICS: false
+  MM_SERVICESETTINGS_ENABLEINCOMINGWEBHOOKS: true
+  MM_SERVICESETTINGS_ENABLEPOSTUSERNAMEOVERRIDE: true
+
 services:
-  mattermost:
-    image: mattermost/mattermost-enterprise-edition:10.11.2
-    restart: unless-stopped
-    # has built in healthcheck so no need to specify one
-    depends_on:
-      postgres:
-        condition: service_healthy
-        restart: true
+  enterprise:
+    <<: *mattermost-base
+    image: mattermost/mattermost-enterprise-edition:release-11.1
     ports:
       - 8065:8065
     environment:
-      - DOMAIN=localhost:8065
-      - TZ=Europe/Lisbon
-      - MM_SQLSETTINGS_DRIVERNAME=postgres
-      - MM_SQLSETTINGS_DATASOURCE=postgres://example:example@postgres:5432/example?sslmode=disable&connect_timeout=10
-      - MM_TEAMSETTINGS_SITENAME=Example
-      - MM_TEAMSETTINGS_CUSTOMDESCRIPTIONTEXT=Welcome to the extension testing instance!
-      - MM_TEAMSETTINGS_ENABLECUSTOMBRAND=true
-      - MM_SUPPORTSETTINGS_HELPLINK=
-      - MM_SERVICESETTINGS_ENABLEDESKTOPLANDINGPAGE=false
-      - MM_PLUGINSETTINGS_ENABLEUPLOADS=true
-      - MM_PLUGINSETTINGS_AUTOMATICPREPACKAGEDPLUGINS=false
-      - MM_BLEVESETTINGS_ENABLEINDEXING=false
-      - MM_BLEVESETTINGS_ENABLESEARCHING=false
-      - MM_BLEVESETTINGS_ENABLEAUTOCOMPLETE=false
-      - MM_TEAMSETTINGS_ENABLEJOINLEAVEMESSAGEBYDEFAULT=false
-      - MM_TEAMSETTINGS_TEAMMATENAMEDISPLAY=nickname_full_name
-      - MM_EMAILSETTINGS_SKIPSERVERCERTIFICATEVERIFICATION=false
-      - MM_METRICSSETTINGS_ENABLENOTIFICATIONMETRICS=false
-      - MM_LOGSETTINGS_ENABLEDIAGNOSTICS=false
-      - MM_SERVICESETTINGS_ENABLEINCOMINGWEBHOOKS=true
-      - MM_SERVICESETTINGS_ENABLEPOSTUSERNAMEOVERRIDE=true
-    volumes:
-      - config:/mattermost/config
-      - data:/mattermost/data
-      - logs:/mattermost/logs
-      - plugins:/mattermost/plugins
-      - client:/mattermost/client/plugins
-      - indexes:/mattermost/bleve-indexes
+      <<: *mattermost-common-env
+      DOMAIN: localhost:8065
+      MM_SERVICESETTINGS_SITEURL: http://localhost:8065
+
+  team:
+    <<: *mattermost-base
+    image: mattermost/mattermost-team-edition:release-11.1
+    ports:
+      - 8066:8065
+    environment:
+      <<: *mattermost-common-env
+      DOMAIN: localhost:8066
+      MM_SERVICESETTINGS_SITEURL: http://localhost:8066
+
   postgres:
-    image: postgres:13.22
+    image: postgres:18.0
     restart: unless-stopped
     volumes:
       - pgdata:/var/lib/postgresql/data
@@ -54,7 +72,6 @@ services:
       interval: 2s
       timeout: 5s
       retries: 10
-
 
 volumes:
   pgdata:
