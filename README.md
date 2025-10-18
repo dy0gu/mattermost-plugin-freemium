@@ -45,6 +45,7 @@ A `docker-compose.yaml` file is provided to quickly spin up two (`team` and `ent
   - Go ([version](api/go.mod#L3))
   - Node ([version](web/package.json#L5))
   - Python ([version](.python-version))
+  - Docker (latest)
 
 - ### Getting Started 🏁
 
