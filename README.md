@@ -79,7 +79,7 @@ A `docker-compose.yaml` file is provided to quickly spin up two (`team` and `ent
   - Pre-commit hooks to run project formatting and linting:
 
     ```shell
-    # Needs the dependencies off all modules installed to run correctly!
+    # Needs the dependencies of all modules installed to run correctly!
     pip install lefthook
     lefthook install
 
