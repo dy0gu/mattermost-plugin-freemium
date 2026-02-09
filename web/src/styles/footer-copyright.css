@@ -1,0 +1,4 @@
+/* Hide the footer notice text */
+.footer-copyright {
+	display: none !important;
+}

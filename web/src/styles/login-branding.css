@@ -1,0 +1,4 @@
+/* Hide the Mattermost name, icon and free label tag from the login page */
+.header-logo-link:has(> .freeBadge) {
+	display: none !important;
+}

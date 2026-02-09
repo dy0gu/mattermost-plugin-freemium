@@ -1,0 +1,9 @@
+/* Hide the paid "User Groups" menu item in product switcher */
+#product-switcher-menu-dropdown #userGroups {
+	display: none !important;
+}
+
+/* Hide the premium setting to highlight keywords */
+#accountSettingsModal .section-min.isDisabled {
+	display: none !important;
+}
