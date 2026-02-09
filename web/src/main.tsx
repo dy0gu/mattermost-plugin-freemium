@@ -23,7 +23,7 @@ interface PluginConfig {
 
 const defaultConfig: PluginConfig = {
 	hide_edition_badge: true,
-	hide_header_branding: false,
+	hide_header_branding: true,
 	hide_login_branding: true,
 	hide_trial_prompts: true,
 	hide_footer_copyright: true,
