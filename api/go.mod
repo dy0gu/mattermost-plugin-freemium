@@ -33,7 +33,6 @@ require (
 	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/philhofer/fwd v1.1.2 // indirect
 	github.com/rogpeppe/go-internal v1.11.0 // indirect
-	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/tinylib/msgp v1.1.9 // indirect
 	github.com/vmihailenco/msgpack/v5 v5.4.1 // indirect
 	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
