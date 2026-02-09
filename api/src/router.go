@@ -1,24 +1,20 @@
 package main
 
 import (
+	"encoding/json"
 	"net/http"
 
 	"github.com/gorilla/mux"
 	"github.com/mattermost/mattermost/server/public/plugin"
 )
 
-// ServeHTTP demonstrates a plugin that handles HTTP requests by greeting the world
-// The root URL is currently <siteUrl>/plugins/com.mattermost.plugin-starter-template/api/v1/
-// Replace com.mattermost.plugin-starter-template with the plugin ID.
 func (p *Plugin) ServeHTTP(c *plugin.Context, w http.ResponseWriter, r *http.Request) {
 	router := mux.NewRouter()
 
-	// Middleware to require that the user is logged in
 	router.Use(p.MattermostAuthorizationRequired)
 
 	apiRouter := router.PathPrefix("/api/v1").Subrouter()
-
-	apiRouter.HandleFunc("/hello", p.HelloWorld).Methods(http.MethodGet)
+	apiRouter.HandleFunc("/config", p.handleGetConfig).Methods(http.MethodGet)
 
 	router.ServeHTTP(w, r)
 }
@@ -35,9 +31,22 @@ func (p *Plugin) MattermostAuthorizationRequired(next http.Handler) http.Handler
 	})
 }
 
-func (p *Plugin) HelloWorld(w http.ResponseWriter, r *http.Request) {
-	if _, err := w.Write([]byte("Hello, world!")); err != nil {
-		p.API.LogError("Failed to write response", "error", err)
+func (p *Plugin) handleGetConfig(w http.ResponseWriter, r *http.Request) {
+	config := p.getConfiguration()
+
+	response := map[string]bool{
+		"hide_edition_badge":   config.HideEditionBadge,
+		"hide_header_branding": config.HideHeaderBranding,
+		"hide_login_branding":  config.HideLoginBranding,
+		"hide_trial_prompts":   config.HideTrialPrompts,
+		"hide_footer_copyright": config.HideFooterCopyright,
+		"hide_paid_features":   config.HidePaidFeatures,
+		"enable_boards_fixes":  config.EnableBoardsFixes,
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	if err := json.NewEncoder(w).Encode(response); err != nil {
+		p.API.LogError("Failed to encode config response", "error", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
