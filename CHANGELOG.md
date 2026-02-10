@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.9.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.8.0...v1.9.0) (2026-02-10)
+
+
+### Features
+
+* add configurable plugin settings with server-side config endpoint ([#29](https://github.com/dy0gu/mattermost-plugin-freemium/issues/29)) ([0c665c6](https://github.com/dy0gu/mattermost-plugin-freemium/commit/0c665c6a55566bc48c15b53e74bdf6cb45748167))
+* add setting to hide premium features in admin console sidebar ([#32](https://github.com/dy0gu/mattermost-plugin-freemium/issues/32)) ([e9d482c](https://github.com/dy0gu/mattermost-plugin-freemium/commit/e9d482c16bcf2f610ae25e3fcfcbe159d4a00259))
+* conditionally load CSS based on admin settings ([#30](https://github.com/dy0gu/mattermost-plugin-freemium/issues/30)) ([02c64de](https://github.com/dy0gu/mattermost-plugin-freemium/commit/02c64de880ca978324b60d3db508f996bc1b067b))
+
 ## [1.8.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.7.0...v1.8.0) (2025-10-18)
 
 
