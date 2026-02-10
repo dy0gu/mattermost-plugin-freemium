@@ -1,8 +1,6 @@
 package main
 
 import (
-	"reflect"
-
 	"github.com/pkg/errors"
 )
 
@@ -19,6 +17,13 @@ import (
 // If you add non-reference types to your configuration struct, be sure to rewrite Clone as a deep
 // copy appropriate for your types
 type configuration struct {
+	HideEditionBadge   bool `json:"HideEditionBadge"`
+	HideHeaderBranding bool `json:"HideHeaderBranding"`
+	HideLoginBranding  bool `json:"HideLoginBranding"`
+	HideTrialPrompts   bool `json:"HideTrialPrompts"`
+	HideFooterCopyright bool `json:"HideFooterCopyright"`
+	HidePaidFeatures   bool `json:"HidePaidFeatures"`
+	EnableBoardsFixes  bool `json:"EnableBoardsFixes"`
 }
 
 // Clone shallow copies the configuration. Your implementation may require a deep copy if
@@ -57,13 +62,6 @@ func (p *Plugin) setConfiguration(configuration *configuration) {
 	defer p.configurationLock.Unlock()
 
 	if configuration != nil && p.configuration == configuration {
-		// Ignore assignment if the configuration struct is empty. Go will optimize the
-		// allocation for same to point at the same memory address, breaking the check
-		// above.
-		if reflect.ValueOf(*configuration).NumField() == 0 {
-			return
-		}
-
 		panic("setConfiguration called with the existing configuration")
 	}
 
@@ -80,8 +78,6 @@ func (p *Plugin) OnConfigurationChange() error {
 	}
 
 	p.setConfiguration(configuration)
-	var config = p.getConfiguration()
-	config.Clone()
 
 	return nil
 }

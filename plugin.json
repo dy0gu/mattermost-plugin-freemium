@@ -6,12 +6,71 @@
 	"support_url": "https://github.com/dy0gu/mattermost-plugin-freemium/issues",
 	"icon_path": "resources/icon.svg",
 	"min_server_version": "9.11.0",
+	"server": {
+		"executables": {
+			"linux-amd64": "api/plugin-linux-amd64",
+			"linux-arm64": "api/plugin-linux-arm64",
+			"darwin-amd64": "api/plugin-darwin-amd64",
+			"darwin-arm64": "api/plugin-darwin-arm64",
+			"windows-amd64": "api/plugin-windows-amd64.exe"
+		}
+	},
 	"webapp": {
 		"bundle_path": "web/plugin-umd.js"
 	},
 	"settings_schema": {
-		"header": "",
+		"header": "Configure which UI modifications are applied. Changes take effect on the next page load.",
 		"footer": "",
-		"settings": []
+		"settings": [
+			{
+				"key": "HideEditionBadge",
+				"display_name": "Hide Edition Badge",
+				"type": "bool",
+				"default": true,
+				"help_text": "Hide just the \"TEAM EDITION\" / \"FREE EDITION\" badge text in the global header, while keeping the Mattermost logo and name visible."
+			},
+			{
+				"key": "HideHeaderBranding",
+				"display_name": "Hide Header Branding",
+				"type": "bool",
+				"default": false,
+				"help_text": "Hide the entire Mattermost branding in the global header (logo, name, and badge). Overrides the badge-only setting when enabled."
+			},
+			{
+				"key": "HideLoginBranding",
+				"display_name": "Hide Login Branding",
+				"type": "bool",
+				"default": true,
+				"help_text": "Hide Mattermost branding with the free badge on the login page."
+			},
+			{
+				"key": "HideTrialPrompts",
+				"display_name": "Hide Trial Prompts",
+				"type": "bool",
+				"default": true,
+				"help_text": "Hide trial and upgrade prompts including the start trial button, upgrade dialogs, view plans button, and admin console banner."
+			},
+			{
+				"key": "HideFooterCopyright",
+				"display_name": "Hide Footer Copyright",
+				"type": "bool",
+				"default": true,
+				"help_text": "Hide the footer copyright text."
+			},
+			{
+				"key": "HidePaidFeatures",
+				"display_name": "Hide Paid Features",
+				"type": "bool",
+				"default": true,
+				"help_text": "Hide references to paid features such as User Groups in the product switcher and premium keyword settings."
+			},
+			{
+				"key": "EnableBoardsFixes",
+				"display_name": "Enable Boards Fixes",
+				"type": "bool",
+				"default": true,
+				"help_text": "Enable layout fixes for the Boards plugin and the mobile navigation button."
+			}
+		]
 	}
 }
