@@ -6,10 +6,45 @@ import { fetchConfig } from "~/requests/config";
 import { injectCSS } from "./utils/css-injector";
 import { injectScripts } from "./utils/script-injector";
 
+interface PluginConfig {
+	hide_edition_badge: boolean;
+	hide_header_branding: boolean;
+	hide_login_branding: boolean;
+	hide_trial_prompts: boolean;
+	hide_footer_copyright: boolean;
+	hide_paid_features: boolean;
+	enable_boards_fixes: boolean;
+}
+
+const defaultConfig: PluginConfig = {
+	hide_edition_badge: true,
+	hide_header_branding: true,
+	hide_login_branding: true,
+	hide_trial_prompts: true,
+	hide_footer_copyright: true,
+	hide_paid_features: true,
+	enable_boards_fixes: true,
+};
+
 // https://developers.mattermost.com/integrate/plugins/components/webapp
 declare global {
 	interface Window {
 		registerPlugin(pluginId: string, plugin: Plugin): void;
+	}
+}
+
+async function fetchConfig(): Promise<PluginConfig> {
+	try {
+		const response = await fetch(
+			`/plugins/${manifest.id}/api/v1/config`,
+			{ credentials: "same-origin" },
+		);
+		if (!response.ok) {
+			return defaultConfig;
+		}
+		return await response.json();
+	} catch {
+		return defaultConfig;
 	}
 }
 
