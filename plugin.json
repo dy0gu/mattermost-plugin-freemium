@@ -1,7 +1,7 @@
 {
 	"name": "Freemium",
 	"id": "freemium",
-	"description": "Injects custom styling on the web UI to remove native enterprise branding and add other QOL improvements.",
+	"description": "Injects custom code to remove native enterprise branding and add other QOL improvements.",
 	"homepage_url": "https://github.com/dy0gu/mattermost-plugin-freemium",
 	"support_url": "https://github.com/dy0gu/mattermost-plugin-freemium/issues",
 	"icon_path": "resources/icon.svg",
@@ -19,57 +19,64 @@
 		"bundle_path": "web/plugin-umd.js"
 	},
 	"settings_schema": {
-		"header": "Configure which UI modifications are applied. Changes take effect on the next page load.",
+		"header": "Configure which modifications are applied. Changes take effect on the next page load, so make sure to refresh your tab after saving.",
 		"footer": "",
 		"settings": [
 			{
 				"key": "HideEditionBadge",
-				"display_name": "Hide Edition Badge",
+				"display_name": "Hide Edition Badge:",
 				"type": "bool",
 				"default": true,
-				"help_text": "Hide just the \"TEAM EDITION\" / \"FREE EDITION\" badge text in the global header, while keeping the Mattermost logo and name visible."
+				"help_text": "Hide just the edition badge text in the global header, while keeping the Mattermost logo and name visible. If you're on a paid edition, this should let you keep your organization's name visible, in case you customized the header."
 			},
 			{
 				"key": "HideHeaderBranding",
-				"display_name": "Hide Header Branding",
+				"display_name": "Hide Header Branding:",
 				"type": "bool",
 				"default": true,
 				"help_text": "Hide the entire Mattermost branding in the global header (logo, name, and badge). Overrides the badge-only setting when enabled."
 			},
 			{
 				"key": "HideLoginBranding",
-				"display_name": "Hide Login Branding",
+				"display_name": "Hide Login Branding:",
 				"type": "bool",
 				"default": true,
 				"help_text": "Hide Mattermost branding with the free badge on the login page."
 			},
 			{
 				"key": "HideTrialPrompts",
-				"display_name": "Hide Trial Prompts",
+				"display_name": "Hide Trial Prompts:",
 				"type": "bool",
 				"default": true,
 				"help_text": "Hide trial and upgrade prompts including the start trial button, upgrade dialogs, view plans button, and admin console banner."
 			},
 			{
 				"key": "HideFooterCopyright",
-				"display_name": "Hide Footer Copyright",
+				"display_name": "Hide Footer Copyright:",
 				"type": "bool",
 				"default": true,
 				"help_text": "Hide the footer copyright text."
 			},
 			{
-				"key": "HidePaidFeatures",
-				"display_name": "Hide Paid Features",
+				"key": "HideUserPaidFeatures",
+				"display_name": "Hide User Paid Features:",
 				"type": "bool",
 				"default": true,
-				"help_text": "Hide references to paid features such as User Groups in the product switcher and premium keyword settings."
+				"help_text": "Hide references to paid features in user facing parts of the app. Removes the Groups menu item in the product switcher and the premium keyword settings section."
+			},
+			{
+				"key": "HideAdminPaidFeatures",
+				"display_name": "Hide Admin Paid Features:",
+				"type": "bool",
+				"default": true,
+				"help_text": "Hide paid feature entries in the admin system console sidebar. This includes any setting with the key icon on the right side of the entry."
 			},
 			{
 				"key": "EnableBoardsFixes",
-				"display_name": "Enable Boards Fixes",
+				"display_name": "Enable Boards Fixes:",
 				"type": "bool",
 				"default": true,
-				"help_text": "Enable layout fixes for the Boards plugin and the mobile navigation button."
+				"help_text": "Enable layout fixes for the Boards plugin, including adding a button to go back to Mattermost chat, which is missing in the original mobile view."
 			}
 		]
 	}

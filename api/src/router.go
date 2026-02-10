@@ -35,13 +35,14 @@ func (p *Plugin) handleGetConfig(w http.ResponseWriter, r *http.Request) {
 	config := p.getConfiguration()
 
 	response := map[string]bool{
-		"hide_edition_badge":   config.HideEditionBadge,
-		"hide_header_branding": config.HideHeaderBranding,
-		"hide_login_branding":  config.HideLoginBranding,
-		"hide_trial_prompts":   config.HideTrialPrompts,
-		"hide_footer_copyright": config.HideFooterCopyright,
-		"hide_paid_features":   config.HidePaidFeatures,
-		"enable_boards_fixes":  config.EnableBoardsFixes,
+		"hideEditionBadge":   config.HideEditionBadge,
+		"hideHeaderBranding": config.HideHeaderBranding,
+		"hideLoginBranding":  config.HideLoginBranding,
+		"hideTrialPrompts":   config.HideTrialPrompts,
+		"hideFooterCopyright": config.HideFooterCopyright,
+		"hideUserPaidFeatures": config.HideUserPaidFeatures,
+		"hideAdminPaidFeatures": config.HideAdminPaidFeatures,
+		"enableBoardsFixes":  config.EnableBoardsFixes,
 	}
 
 	w.Header().Set("Content-Type", "application/json")

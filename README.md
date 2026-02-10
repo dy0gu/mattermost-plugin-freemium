@@ -1,6 +1,6 @@
 # Keeping it clean 🧹💼
 
-This plugin was created to remove all free tier labels, warnings, and enterprise upgrade reminders from the Mattermost free edition web interface. It is intended to support a clean, self-hosted experience free from branding or ads tied to the original platform. It has now also evolved to provided QOL fixes for some less updated plugins, these fixes take no effect if you don't use such plugins.
+This plugin was created to remove all free tier labels, warnings, and enterprise upgrade reminders from the Mattermost free edition web interface. It is intended to support a clean, self-hosted experience free from branding or ads tied to the original platform. It has now also evolved to provided QOL fixes for some less updated plugins.
 
 Initially, the idea was to allow custom user CSS branding via a plugin settings text box. However, this was discarded out of respect for the Mattermost team, as they've since implemented this feature in the enterprise edition.
 
@@ -16,8 +16,12 @@ Feel free to raise issues for any areas you think the plugin should address but 
 ## Usage 🚀
 
 - [Use this link to download the latest version.](https://github.com/dy0gu/mattermost-plugin-freemium/releases/latest/download/freemium.tar.gz)
+
 - Enable [custom plugin uploads](https://docs.mattermost.com/configure/plugins-configuration-settings.html#upload-plugin) in your configuration.
+
 - Install and enable the plugin using the admin console.
+
+- Most changes can be toggled through the plugin settings page.
 
 ## Compatibility 📀
 
@@ -26,9 +30,10 @@ The plugin has been tested with the following versions:
 - **10.x**
 - **11.x**
 
-Any new version is likely also compatible out of the box and will be incrementally supported while attempting to maintaining fixes for earlier releases.
+Any new version is likely also compatible out of the box, if not, please raise an issue.
 
-Both the `team` and `enterprise` docker images should work with the plugin.
+The `team`, `entry`, `professional` and `enterprise` editions should all work with the plugin. Some of the features may only be revelant to
+lower tier editions since the higher tiers already offer customization options.
 
 ## Development 🛠️
 
@@ -45,7 +50,7 @@ A `docker-compose.yaml` file is provided to quickly spin up two (`team` and `ent
   - Go ([version](api/go.mod#L3))
   - Node ([version](web/package.json#L5))
   - Python ([version](.python-version))
-  - Docker (latest)
+  - Docker (latest is always recommended unless something here is deprecated)
 
 - ### Getting Started 🏁
 
@@ -87,8 +92,6 @@ A `docker-compose.yaml` file is provided to quickly spin up two (`team` and `ent
     # These files must be added to the staging area and commited again after being fixed up.
     ```
 
-- ### Tips 💡
+- ### Notes 💡
 
-  - The `api` section in **Go** is currently unused, you can fork the project and refer to the comments in the `web/src/main.tsx` file to see how additional styling or branding can be added or removed, in addition to the changes provided by the plugin.
-
-  - For an example of a plugin manifest with both server and webapp logic see this [template repository](https://github.com/mattermost/mattermost-plugin-starter-template/blob/master/plugin.json) from the official mattermost team, this repository is a heavily modded version of that template.
+  - This repository is a heavily modded version of the official [mattermost-plugin-starter-template](https://github.com/mattermost/mattermost-plugin-starter-template), to simplify debugging and development.
