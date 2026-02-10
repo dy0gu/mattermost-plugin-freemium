@@ -4,7 +4,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-// configuration captures the plugin's external configuration as exposed in the Mattermost server
+// This configuration captures the plugin's external configuration as exposed in the Mattermost server
 // configuration, as well as values computed from the configuration
 // Any public fields will be deserialized from the Mattermost server configuration in OnConfigurationChange
 //
@@ -22,7 +22,8 @@ type configuration struct {
 	HideLoginBranding  bool `json:"HideLoginBranding"`
 	HideTrialPrompts   bool `json:"HideTrialPrompts"`
 	HideFooterCopyright bool `json:"HideFooterCopyright"`
-	HidePaidFeatures   bool `json:"HidePaidFeatures"`
+	HideUserPaidFeatures   bool `json:"HideUserPaidFeatures"`
+	HideAdminPaidFeatures   bool `json:"HideAdminPaidFeatures"`
 	EnableBoardsFixes  bool `json:"EnableBoardsFixes"`
 }
 
@@ -33,7 +34,7 @@ func (c *configuration) Clone() *configuration {
 	return &clone
 }
 
-// getConfiguration retrieves the active configuration under lock, making it safe to use
+// Use getConfiguration to retrieve the active configuration under lock, making it safe to use
 // concurrently. The active configuration may change underneath the client of this method, but
 // the struct returned by this API call is considered immutable.
 func (p *Plugin) getConfiguration() *configuration {
@@ -47,7 +48,7 @@ func (p *Plugin) getConfiguration() *configuration {
 	return p.configuration
 }
 
-// setConfiguration replaces the active configuration under lock
+// Calling setConfiguration replaces the active configuration under lock
 //
 // Do not call setConfiguration while holding the configurationLock, as sync.Mutex is not
 // reentrant. In particular, avoid using the plugin API entirely, as this may in turn trigger a

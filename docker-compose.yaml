@@ -59,7 +59,7 @@ services:
       MM_SERVICESETTINGS_SITEURL: http://localhost:8066
 
   postgres:
-    image: postgres:18.0
+    image: postgres:17.7
     restart: unless-stopped
     volumes:
       - pgdata:/var/lib/postgresql/data
@@ -68,7 +68,7 @@ services:
       - POSTGRES_PASSWORD=example
       - POSTGRES_DB=example
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U example"]
+      test: [ "CMD-SHELL", "pg_isready -U example" ]
       interval: 2s
       timeout: 5s
       retries: 10

@@ -1,0 +1,4 @@
+/* Hides System Console sidebar setting items that are reserved for paid editions */
+li:has(> :first-child.sidebar-section-title):has(i.icon-key-variant) {
+    display: none;
+}

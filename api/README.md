@@ -1,15 +1,16 @@
 # API 🧩
 
-- Ensure the dependencies are correct:
+- Setup dependencies:
 
     ```shell
     go mod tidy
     ```
 
-- Build the api module for a single architecture:
+- Build the API module for a single architecture:
 
     ```shell
-    # Set the respective environment variables:
+    # Set the output environment variables:
+    # (syntax may differ based on OS/shell used)
     GOOS=windows
     GOARCH=amd64
 
