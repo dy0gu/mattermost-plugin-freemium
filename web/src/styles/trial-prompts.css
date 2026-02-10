@@ -1,14 +1,3 @@
-/* Hide the Mattermost name, icon and free label tag from the home page */
-[class^="ProductBrandingTeamEditionContainer"],
-[class^="ProductBrandingFreeEditionContainer"] {
-	display: none !important;
-}
-
-/* Hide the Mattermost name, icon and free label tag from the login page */
-.header-logo-link:has(> .freeBadge) {
-	display: none !important;
-}
-
 /* Hide the team edition warning in the bottom of the open top left corner menu */
 #startTrial {
 	display: none !important;
@@ -29,22 +18,7 @@ div[role="dialog"]:has(> #StartTrialFormModal) {
 	display: none !important;
 }
 
-/* Hide the footer notice text */
-.footer-copyright {
-	display: none !important;
-}
-
 /* Hide the view plans button in the top right corner of the dashboard */
 #RightControlsContainer #UpgradeButton {
-	display: none !important;
-}
-
-/* Hide the paid "User Groups" menu item in product switcher */
-#product-switcher-menu-dropdown #userGroups {
-	display: none !important;
-}
-
-/* Hide the premium setting to highlight keywords */
-#accountSettingsModal .section-min.isDisabled {
 	display: none !important;
 }

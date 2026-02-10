@@ -33,7 +33,7 @@
 				"key": "HideHeaderBranding",
 				"display_name": "Hide Header Branding",
 				"type": "bool",
-				"default": false,
+				"default": true,
 				"help_text": "Hide the entire Mattermost branding in the global header (logo, name, and badge). Overrides the badge-only setting when enabled."
 			},
 			{

@@ -1,0 +1,5 @@
+/* Hide just the edition badge text (TEAM EDITION / FREE EDITION) in the header */
+[class^="ProductBrandingTeamEditionContainer"] > span[class*="Badge"],
+[class^="ProductBrandingFreeEditionContainer"] > span[class*="Badge"] {
+	display: none !important;
+}

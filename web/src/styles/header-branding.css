@@ -1,0 +1,5 @@
+/* Hide the Mattermost name, icon and free label tag from the home page */
+[class^="ProductBrandingTeamEditionContainer"],
+[class^="ProductBrandingFreeEditionContainer"] {
+	display: none !important;
+}
