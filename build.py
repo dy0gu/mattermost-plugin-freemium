@@ -106,9 +106,16 @@ class PluginBuilder:
         if self.build_web_enabled:
             shutil.copytree(self.web_dist, plugin_dir / self.web_dist.parent.name)
 
-        # Create tar bundle
+        # Create tar bundle, setting executable permissions on server binaries
+        # (Windows builds don't set the Unix execute bit)
+        api_dir_name = self.api_dist.parent.name
+        def fix_permissions(info):
+            if info.name.startswith(f"{self.plugin_id}/{api_dir_name}/") and info.isfile():
+                info.mode = 0o755
+            return info
+
         with tarfile.open(self.bundle_dist / self.bundle_name, "w:gz") as tar:
-            tar.add(plugin_dir, arcname=plugin_dir.name)
+            tar.add(plugin_dir, arcname=plugin_dir.name, filter=fix_permissions)
 
         # Remove the non-bundled directories
         shutil.rmtree(plugin_dir)
