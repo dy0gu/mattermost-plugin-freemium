@@ -19,7 +19,9 @@ jobs:
         uses: googleapis/release-please-action@v4
         id: metadata
         with:
-          release-type: simple
+          config-file: release.json
+          manifest-file: .manifest.json
+
   build:
     needs: [metadata]
     if: ${{ needs.metadata.outputs.release-created}}

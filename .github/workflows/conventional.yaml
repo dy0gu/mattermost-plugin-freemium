@@ -1,11 +1,11 @@
-name: merge
+name: conventional
 
 on:
   pull_request_target:
     types: [opened, reopened, edited]
 
 jobs:
-  title:
+  pr-title:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v4
