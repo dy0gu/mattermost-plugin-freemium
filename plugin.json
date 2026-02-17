@@ -68,7 +68,7 @@
 				"key": "HideAdminPaidFeatures",
 				"display_name": "Hide Admin Paid Features:",
 				"type": "bool",
-				"default": true,
+				"default": false,
 				"help_text": "Hide paid feature entries in the admin system console sidebar. This includes any setting with the key icon on the right side of the entry."
 			},
 			{

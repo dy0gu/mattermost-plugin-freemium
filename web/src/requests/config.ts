@@ -1,4 +1,4 @@
-import manifest from "~/../../plugin.json";
+import manifest from "#/plugin.json";
 
 export type PluginConfig = {
 	hideEditionBadge: boolean;
@@ -18,7 +18,7 @@ const defaultConfig: PluginConfig = {
 	hideTrialPrompts: true,
 	hideFooterCopyright: true,
 	hideUserPaidFeatures: true,
-	hideAdminPaidFeatures: true,
+	hideAdminPaidFeatures: false,
 	enableBoardsFixes: true,
 };
 

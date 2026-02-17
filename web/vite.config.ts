@@ -1,7 +1,7 @@
 import path from "node:path";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import manifest from "../plugin.json";
+import manifest from "#/plugin.json";
 
 export default defineConfig({
 	plugins: [tsconfigPaths()],

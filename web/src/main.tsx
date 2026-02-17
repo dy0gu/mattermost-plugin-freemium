@@ -1,6 +1,6 @@
 import type { GlobalState } from "@mattermost/types/store";
 import type { Action, Store } from "redux";
-import manifest from "~/../../plugin.json";
+import manifest from "#/plugin.json";
 import { fetchConfig } from "~/requests/config";
 import type { PluginRegistry } from "~/types/mattermost";
 import { injectCSS } from "./utils/css-injector";
