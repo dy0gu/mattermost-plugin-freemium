@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.9.0...v1.9.1) (2026-02-17)
+
+
+### Performance Improvements
+
+* remove unused code and unordered CSS specifiers ([e25f220](https://github.com/dy0gu/mattermost-plugin-freemium/commit/e25f2204f52b6578c533998470cc04c0fe1cdf6c))
+
 ## [1.9.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.8.0...v1.9.0) (2026-02-10)
 
 
