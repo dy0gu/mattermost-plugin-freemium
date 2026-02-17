@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.9.1...v1.10.0) (2026-02-17)
+
+
+### Features
+
+* Default hiding paid admin console features to false ([ec3d264](https://github.com/dy0gu/mattermost-plugin-freemium/commit/ec3d264d622c196c68eaf638b2aad23f6a79abef))
+
 ## [1.9.1](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.9.0...v1.9.1) (2026-02-17)
 
 
