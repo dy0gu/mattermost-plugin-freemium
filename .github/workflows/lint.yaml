@@ -6,7 +6,7 @@ on:
   pull_request_target:
 
 jobs:
-  api-check:
+  api:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -21,7 +21,7 @@ jobs:
         run: go fmt .
       - name: Run linter
         run: go vet .
-  web-check:
+  web:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -32,8 +32,8 @@ jobs:
         with:
           node-version-file: web/package.json
           cache-dependency-path: web/package-lock.json
-      - name: Install Biome
+      - name: Install dependencies
         working-directory: ./
-        run: npm install -g @biomejs/biome@$(< package.json jq -r ".devDependencies.\"@biomejs/biome\"")
+        run: npm ci
       - name: Run check
         run: npm run check

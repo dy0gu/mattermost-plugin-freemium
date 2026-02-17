@@ -1,0 +1,16 @@
+{
+    "release-type": "simple",
+    "separate-pull-requests": true,
+    "always-update": true,
+    "sequential-calls": true,
+    "release-search-depth": 500,
+    "commit-search-depth": 1000,
+    "plugins": [
+        {
+            "type": "sentence-case"
+        }
+    ],
+    "packages": {
+        ".": {}
+    }
+}
