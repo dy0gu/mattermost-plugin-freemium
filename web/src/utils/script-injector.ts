@@ -1,20 +1,23 @@
-import { PluginConfig } from "~/requests/config";
-import { PluginRegistry } from "~/types/mattermost";
+import type { PluginConfig } from "~/requests/config";
 import boardsTS from "~/scripts/boards";
+import type { PluginRegistry } from "~/types/mattermost";
 
 export function injectScripts(config: PluginConfig, registry: PluginRegistry) {
-    const scriptConditions: Array<[boolean, () => void]> = [
-        [config.enableBoardsFixes, () => {
-            registry.registerGlobalComponent(() => {
-                boardsTS();
-                return null;
-            });
-        }],
-    ];
+	const scriptConditions: Array<[boolean, () => void]> = [
+		[
+			config.enableBoardsFixes,
+			() => {
+				registry.registerGlobalComponent(() => {
+					boardsTS();
+					return null;
+				});
+			},
+		],
+	];
 
-    scriptConditions.forEach(([enabled, inject]) => {
-        if (enabled) {
-            inject();
-        }
-    });
+	scriptConditions.forEach(([enabled, inject]) => {
+		if (enabled) {
+			inject();
+		}
+	});
 }

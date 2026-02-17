@@ -38,10 +38,6 @@
 		display: flex !important;
 	}
 
-	.mid-head {
-		margin-left: 6px;
-	}
-
 	.fc-toolbar-title {
 		text-align: center !important;
 	}
@@ -135,6 +131,15 @@
 		max-width: 100vw !important;
 	}
 
+	.dialog .toolbar {
+		padding-left: 0px !important;
+	}
+
+	.BoardSwitcherDialog .toolbar {
+		width: 100% !important;
+		padding-left: 20px !important;
+	}
+
 	.Modal.bottom .toolbar {
 		visibility: hidden !important;
 	}
@@ -148,17 +153,8 @@
 		margin-left: 10px;
 	}
 
-	.dialog .toolbar {
-		padding-left: 0px !important;
-	}
-
 	.cardFollowBtn {
 		padding: 0 10px !important;
-	}
-
-	.BoardSwitcherDialog .toolbar {
-		width: 100% !important;
-		padding-left: 20px !important;
 	}
 
 	.BoardSwitcherDialog .dialog {
