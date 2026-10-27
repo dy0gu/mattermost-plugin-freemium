@@ -1,5 +1,47 @@
 # Changelog
 
+## [3.0.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v2.0.0...v3.0.0) (2026-10-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* add support for Mattermost v12 ([#47](https://github.com/dy0gu/mattermost-plugin-freemium/issues/47))
+* initial commit
+
+### Features
+
+* Add additional fixes for the boards plugin ([ba240c2](https://github.com/dy0gu/mattermost-plugin-freemium/commit/ba240c2030e1c71b5c33cfcec5e7278566caf0ca))
+* Add button to return to channels in mobile boards page ([cf1d7da](https://github.com/dy0gu/mattermost-plugin-freemium/commit/cf1d7da9bcfc82cbbfe55e4ba6a75a4aabc610de))
+* Add configurable plugin settings with server-side config endpoint ([#29](https://github.com/dy0gu/mattermost-plugin-freemium/issues/29)) ([0c665c6](https://github.com/dy0gu/mattermost-plugin-freemium/commit/0c665c6a55566bc48c15b53e74bdf6cb45748167))
+* Add more board fixes ([6d16f90](https://github.com/dy0gu/mattermost-plugin-freemium/commit/6d16f90d11ccfac64c4e5e5b105f77b47bb40c60))
+* Add new mobile related fixes ([23d2bc9](https://github.com/dy0gu/mattermost-plugin-freemium/commit/23d2bc91ef3ffd98d05864bf1a94bbc825295715))
+* Add setting to hide premium features in admin console sidebar ([#32](https://github.com/dy0gu/mattermost-plugin-freemium/issues/32)) ([e9d482c](https://github.com/dy0gu/mattermost-plugin-freemium/commit/e9d482c16bcf2f610ae25e3fcfcbe159d4a00259))
+* Add styling fixes for the previously official boards plugin ([001c0a7](https://github.com/dy0gu/mattermost-plugin-freemium/commit/001c0a7bd9f7043eb68eca573b9f58c9af075f18))
+* Add support for Mattermost v12 ([#47](https://github.com/dy0gu/mattermost-plugin-freemium/issues/47)) ([f453827](https://github.com/dy0gu/mattermost-plugin-freemium/commit/f45382710dba78e949afe7a3438ea1fa5e873a65))
+* Conditionally load CSS based on admin settings ([#30](https://github.com/dy0gu/mattermost-plugin-freemium/issues/30)) ([02c64de](https://github.com/dy0gu/mattermost-plugin-freemium/commit/02c64de880ca978324b60d3db508f996bc1b067b))
+* Default hiding paid admin console features to false ([ec3d264](https://github.com/dy0gu/mattermost-plugin-freemium/commit/ec3d264d622c196c68eaf638b2aad23f6a79abef))
+* Hide "view plans" button in the dashboard ([9c9db99](https://github.com/dy0gu/mattermost-plugin-freemium/commit/9c9db999ad0d580d6f296f5a010d733244379d33))
+* Hide new elements pointed out by [#21](https://github.com/dy0gu/mattermost-plugin-freemium/issues/21) ([b965871](https://github.com/dy0gu/mattermost-plugin-freemium/commit/b965871fff0f10e72de5f529a303fb8ffa87b6a1))
+* Hide new label reported by [#24](https://github.com/dy0gu/mattermost-plugin-freemium/issues/24) ([ebc5048](https://github.com/dy0gu/mattermost-plugin-freemium/commit/ebc504814f88017c2dfc68c23759325715254cce))
+* Improve project base for easier forking ([9f3370b](https://github.com/dy0gu/mattermost-plugin-freemium/commit/9f3370b758c27740a3b5fc1ba39ea53132cd201f))
+
+
+### Bug Fixes
+
+* Add empty block explanation ([21f2bc8](https://github.com/dy0gu/mattermost-plugin-freemium/commit/21f2bc85bc4546baac79d83d4426f580f9bd6756))
+* Improve board search dialog ([10d2738](https://github.com/dy0gu/mattermost-plugin-freemium/commit/10d2738fa7abbd3da658a72976ec6ea7e6c359ec))
+* Revise structural issues ([9ddcf41](https://github.com/dy0gu/mattermost-plugin-freemium/commit/9ddcf411ee7cd253715ffc00981a860b3551ab9c))
+
+
+### Performance Improvements
+
+* Remove unused code and unordered CSS specifiers ([e25f220](https://github.com/dy0gu/mattermost-plugin-freemium/commit/e25f2204f52b6578c533998470cc04c0fe1cdf6c))
+
+
+### Miscellaneous Chores
+
+* Initial commit ([a49f815](https://github.com/dy0gu/mattermost-plugin-freemium/commit/a49f815248f78f843722507dcdf915031368c5c6))
+
 ## [2.0.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.10.0...v2.0.0) (2026-10-27)
 
 
