@@ -14,7 +14,8 @@
 			"ESNext"
 		],
 		"target": "ES5",
-		"moduleResolution": "node",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
 		"jsx": "react-jsx",
 		"skipLibCheck": true,
 		"esModuleInterop": true,

@@ -3,6 +3,7 @@
     "separate-pull-requests": true,
     "always-update": true,
     "sequential-calls": true,
+    "draft": true,
     "release-search-depth": 500,
     "commit-search-depth": 1000,
     "plugins": [

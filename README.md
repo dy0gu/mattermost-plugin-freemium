@@ -25,15 +25,15 @@ Feel free to raise issues for any areas you think the plugin should address but 
 
 ## Compatibility 📀
 
-The plugin has been tested with the following versions:
-
-- **10.x**
-- **11.x**
-
-Any new version is likely also compatible out of the box, if not, please raise an issue.
+| Mattermost version | Last compatible plugin release |
+| --- | --- |
+| 10.x - 11.x | [v1.10.0](https://github.com/dy0gu/mattermost-plugin-freemium/releases/download/v1.10.0/freemium.tar.gz) |
+| 12.x+ | [Latest](https://github.com/dy0gu/mattermost-plugin-freemium/releases/latest/download/freemium.tar.gz) |
 
 The `team`, `entry`, `professional` and `enterprise` editions should all work with the plugin. Some of the features may only be revelant to
 lower tier editions since the higher tiers already offer customization options.
+
+New plugin features will **NOT** be ported to versions that support older Mattermost versions.
 
 ## Development 🛠️
 

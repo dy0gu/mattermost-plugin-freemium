@@ -1,10 +1,11 @@
-import os
+import argparse
 import json
+import os
 import shutil
 import subprocess
 import tarfile
-import argparse
 from pathlib import Path
+
 
 class PluginBuilder:
     def __init__(self):
@@ -84,7 +85,7 @@ class PluginBuilder:
 
     def bundle(self):
         """Create the final plugin bundle"""
-        print(f"Bundling plugin...")
+        print("Bundling plugin...")
         print(f"ID: {self.plugin_id}")
         print(f"VERSION: {self.plugin_version}")
 
