@@ -1,0 +1,21 @@
+# https://github.com/googleapis/release-please?tab=readme-ov-file#how-should-i-write-my-commits
+name: convention
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, edited]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  title:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    steps:
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

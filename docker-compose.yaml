@@ -40,7 +40,7 @@ x-common-env: &mattermost-common-env
 services:
   enterprise:
     <<: *mattermost-base
-    image: mattermost/mattermost-enterprise-edition:release-11.1
+    image: mattermost/mattermost-enterprise-edition:release-12.0
     ports:
       - 8065:8065
     environment:
@@ -50,7 +50,7 @@ services:
 
   team:
     <<: *mattermost-base
-    image: mattermost/mattermost-team-edition:release-11.1
+    image: mattermost/mattermost-team-edition:release-12.0
     ports:
       - 8066:8065
     environment:
