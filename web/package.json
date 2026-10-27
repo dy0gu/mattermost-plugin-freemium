@@ -9,16 +9,15 @@
 		"check": "biome check --write"
 	},
 	"dependencies": {
-		"react": "^18.3.0",
-		"redux": "5.0.1"
+		"react": "^19.3.1",
+		"redux": "^5.0.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.3",
-		"@mattermost/types": "10.3.0",
-		"@types/node": "22.10.5",
-		"@types/react": "18.3.0",
-		"typescript": "5.7.3",
-		"vite": "8.0.16",
-		"vite-tsconfig-paths": "5.1.4"
+		"@biomejs/biome": "^2.6.3",
+		"@mattermost/types": "^11.9.0",
+		"@types/node": "^26.6.5",
+		"@types/react": "^19.3.0",
+		"typescript": "^5.9.3",
+		"vite": "^8.3.5"
 	}
 }
