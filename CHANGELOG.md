@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.10.0...v2.0.0) (2026-10-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* add support for Mattermost v12 ([#47](https://github.com/dy0gu/mattermost-plugin-freemium/issues/47))
+
+### Features
+
+* Add support for Mattermost v12 ([#47](https://github.com/dy0gu/mattermost-plugin-freemium/issues/47)) ([f453827](https://github.com/dy0gu/mattermost-plugin-freemium/commit/f45382710dba78e949afe7a3438ea1fa5e873a65))
+
 ## [1.10.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.9.1...v1.10.0) (2026-02-17)
 
 
