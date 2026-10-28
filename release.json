@@ -4,6 +4,7 @@
     "always-update": true,
     "sequential-calls": true,
     "draft": true,
+    "force-tag-creation": true,
     "release-search-depth": 500,
     "commit-search-depth": 1000,
     "plugins": [
