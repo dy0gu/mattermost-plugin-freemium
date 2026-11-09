@@ -1,14 +1,12 @@
 # Keeping it clean 🧹💼
 
-This plugin was created to remove all free tier labels, warnings, and enterprise upgrade reminders from the Mattermost free edition web interface. It is intended to support a clean, self-hosted experience free from branding or ads tied to the original platform.
-
+This plugin was created to remove all free tier labels, warnings, and enterprise upgrade reminders from the Mattermost free edition web interface. 
 
 Feel free to raise issues for any areas you think the plugin should address but currently doesn't.
 
-**Here is a non-exhaustive showcase of some of the changes made by the plugin:**
+**Here is an example of some of the menu changes made by the plugin:**
 
 ![1](https://i.postimg.cc/QNbtDHwf/1.png)
-![2](https://i.postimg.cc/HnBs9hXq/2.png)
 
 ## Usage 🚀
 
