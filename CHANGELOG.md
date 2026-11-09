@@ -6,6 +6,7 @@
 ### Features
 
 * Add a shortcut to temporarily show hidden elements ([35fc513](https://github.com/dy0gu/mattermost-plugin-freemium/commit/35fc513af0a2ed1776c36ea4e0de70b4620fc6b8))
+* Remove fixes for boards plugin ([35fc513](https://github.com/dy0gu/mattermost-plugin-freemium/commit/35fc513af0a2ed1776c36ea4e0de70b4620fc6b8))
 
 
 ### Bug Fixes
