@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v2.0.0...v2.1.0) (2026-11-09)
+
+
+### Features
+
+* Add a shortcut to temporarily show hidden elements ([35fc513](https://github.com/dy0gu/mattermost-plugin-freemium/commit/35fc513af0a2ed1776c36ea4e0de70b4620fc6b8))
+
+
+### Bug Fixes
+
+* Adapt selectors to handle Mattermost v12.1.0 changes ([d02ce2a](https://github.com/dy0gu/mattermost-plugin-freemium/commit/d02ce2a79a09e2941fc310e7cdbdc3638d4006a1))
+
 ## [2.0.0](https://github.com/dy0gu/mattermost-plugin-freemium/compare/v1.10.0...v2.0.0) (2026-10-27)
 
 
