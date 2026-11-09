@@ -33,7 +33,7 @@
 				"key": "HideHeaderBranding",
 				"display_name": "Hide Header Branding:",
 				"type": "bool",
-				"default": true,
+				"default": false,
 				"help_text": "Hide the entire Mattermost branding in the global header (logo, name, and badge). Overrides the badge-only setting when enabled."
 			},
 			{
@@ -58,11 +58,11 @@
 				"help_text": "Hide the footer copyright text."
 			},
 			{
-				"key": "HideUserPaidFeatures",
-				"display_name": "Hide User Paid Features:",
+				"key": "HideSwitcherEditionItem",
+				"display_name": "Hide the edition item in the product switcher.",
 				"type": "bool",
 				"default": true,
-				"help_text": "Hide references to paid features in user facing parts of the app. Removes the Groups menu item in the product switcher and the premium keyword settings section."
+				"help_text": "Hide the edition item in the product switcher and remove the resulting extra spacing."
 			},
 			{
 				"key": "HideAdminPaidFeatures",
@@ -70,13 +70,6 @@
 				"type": "bool",
 				"default": false,
 				"help_text": "Hide paid feature entries in the admin system console sidebar. This includes any setting with the key icon on the right side of the entry."
-			},
-			{
-				"key": "EnableBoardsFixes",
-				"display_name": "Enable Boards Fixes:",
-				"type": "bool",
-				"default": true,
-				"help_text": "Enable layout fixes for the Boards plugin, including adding a button to go back to Mattermost chat, which is missing in the original mobile view."
 			}
 		]
 	}

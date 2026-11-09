@@ -6,20 +6,20 @@ export type PluginConfig = {
 	hideLoginBranding: boolean;
 	hideTrialPrompts: boolean;
 	hideFooterCopyright: boolean;
-	hideUserPaidFeatures: boolean;
+	hideSwitcherEditionItem: boolean;
 	hideAdminPaidFeatures: boolean;
-	enableBoardsFixes: boolean;
+
 };
 
 const defaultConfig: PluginConfig = {
 	hideEditionBadge: true,
-	hideHeaderBranding: true,
+	hideHeaderBranding: false,
 	hideLoginBranding: true,
 	hideTrialPrompts: true,
 	hideFooterCopyright: true,
-	hideUserPaidFeatures: true,
+	hideSwitcherEditionItem: true,
 	hideAdminPaidFeatures: false,
-	enableBoardsFixes: true,
+
 };
 
 export async function fetchConfig(): Promise<PluginConfig> {

@@ -17,14 +17,13 @@ import (
 // If you add non-reference types to your configuration struct, be sure to rewrite Clone as a deep
 // copy appropriate for your types
 type configuration struct {
-	HideEditionBadge   bool `json:"HideEditionBadge"`
-	HideHeaderBranding bool `json:"HideHeaderBranding"`
-	HideLoginBranding  bool `json:"HideLoginBranding"`
-	HideTrialPrompts   bool `json:"HideTrialPrompts"`
-	HideFooterCopyright bool `json:"HideFooterCopyright"`
-	HideUserPaidFeatures   bool `json:"HideUserPaidFeatures"`
+	HideEditionBadge        bool `json:"HideEditionBadge"`
+	HideHeaderBranding      bool `json:"HideHeaderBranding"`
+	HideLoginBranding       bool `json:"HideLoginBranding"`
+	HideTrialPrompts        bool `json:"HideTrialPrompts"`
+	HideFooterCopyright     bool `json:"HideFooterCopyright"`
+	HideSwitcherEditionItem bool `json:"HideSwitcherEditionItem"`
 	HideAdminPaidFeatures   bool `json:"HideAdminPaidFeatures"`
-	EnableBoardsFixes  bool `json:"EnableBoardsFixes"`
 }
 
 // Clone shallow copies the configuration. Your implementation may require a deep copy if

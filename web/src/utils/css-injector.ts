@@ -1,12 +1,11 @@
 import type { PluginConfig } from "~/requests/config";
 import adminPaidFeaturesCSS from "~/styles/admin-paid-features.css?raw";
-import boardsCSS from "~/styles/boards.css?raw";
 import editionBadgeCSS from "~/styles/edition-badge.css?raw";
 import footerCopyrightCSS from "~/styles/footer-copyright.css?raw";
 import headerBrandingCSS from "~/styles/header-branding.css?raw";
 import loginBrandingCSS from "~/styles/login-branding.css?raw";
 import trialPromptsCSS from "~/styles/trial-prompts.css?raw";
-import userPaidFeaturesCSS from "~/styles/user-paid-features.css?raw";
+import switcherEditionItemCSS from "~/styles/switcher-edition-item.css?raw";
 
 export function injectCSS(config: PluginConfig) {
 	const cssParts: string[] = [];
@@ -17,9 +16,8 @@ export function injectCSS(config: PluginConfig) {
 		[config.hideLoginBranding, loginBrandingCSS],
 		[config.hideTrialPrompts, trialPromptsCSS],
 		[config.hideFooterCopyright, footerCopyrightCSS],
-		[config.hideUserPaidFeatures, userPaidFeaturesCSS],
+		[config.hideSwitcherEditionItem, switcherEditionItemCSS],
 		[config.hideAdminPaidFeatures, adminPaidFeaturesCSS],
-		[config.enableBoardsFixes, boardsCSS],
 	];
 
 	cssConditions.forEach(([enabled, css]) => {
@@ -28,9 +26,8 @@ export function injectCSS(config: PluginConfig) {
 		}
 	});
 
-	if (cssParts.length > 0) {
-		const style = document.createElement("style");
-		style.textContent = cssParts.join("\n");
-		document.head.appendChild(style);
-	}
+	const style = document.createElement("style");
+	style.textContent = cssParts.join("\n");
+	document.head.appendChild(style);
+	return style;
 }

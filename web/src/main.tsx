@@ -4,7 +4,7 @@ import manifest from "#/plugin.json";
 import { fetchConfig } from "~/requests/config";
 import type { PluginRegistry } from "~/types/mattermost";
 import { injectCSS } from "./utils/css-injector";
-import { injectScripts } from "./utils/script-injector";
+import { injectJS } from "./utils/js-injector";
 
 // https://developers.mattermost.com/integrate/plugins/components/webapp
 declare global {
@@ -15,18 +15,31 @@ declare global {
 
 // https://developers.mattermost.com/integrate/reference/webapp/webapp-reference
 class Plugin {
+	private generation = 0;
+	private cleanup?: () => void;
+
 	public async initialize(
-		registry: PluginRegistry,
+		_registry: PluginRegistry,
 		_store: Store<GlobalState, Action<string>>,
 	) {
+		const generation = ++this.generation;
 		const config = await fetchConfig();
+		if (generation !== this.generation) {
+			return;
+		}
+		const style = injectCSS(config);
+		const scripts = injectJS(style);
 
-		injectCSS(config);
-		injectScripts(config, registry);
+		this.cleanup = () => {
+			scripts.cleanup();
+			style.remove();
+		};
 	}
 
 	public uninitialize() {
-		// No cleanup needed with current implementation
+		this.generation++;
+		this.cleanup?.();
+		this.cleanup = undefined;
 	}
 }
 

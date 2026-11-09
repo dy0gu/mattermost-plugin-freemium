@@ -1,0 +1,11 @@
+.globalHeader-leftControls-productSwitcherMenu-editionMenuItem {
+	display: none !important;
+}
+
+#switchProductMenu {
+	padding-bottom: 0;
+}
+
+#switchProductMenu > hr:last-of-type {
+	margin-bottom: 0;
+}

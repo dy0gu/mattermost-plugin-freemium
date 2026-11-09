@@ -1,10 +1,7 @@
 # Keeping it clean 🧹💼
 
-This plugin was created to remove all free tier labels, warnings, and enterprise upgrade reminders from the Mattermost free edition web interface. It is intended to support a clean, self-hosted experience free from branding or ads tied to the original platform. It has now also evolved to provided QOL fixes for some less updated plugins.
+This plugin was created to remove all free tier labels, warnings, and enterprise upgrade reminders from the Mattermost free edition web interface. It is intended to support a clean, self-hosted experience free from branding or ads tied to the original platform.
 
-Initially, the idea was to allow custom user CSS branding via a plugin settings text box. However, this was discarded out of respect for the Mattermost team, as they've since implemented this feature in the enterprise edition.
-
-To clarify, this plugin is not intended to undermine Mattermost's work. The paid editions are vital to the platform's continued development and the talented team behind it. If you can, consider supporting them. Instead, this plugin provides an alternative for those who cannot purchase a paid edition or are restricted by legal or branding requirements.
 
 Feel free to raise issues for any areas you think the plugin should address but currently doesn't.
 
@@ -22,6 +19,8 @@ Feel free to raise issues for any areas you think the plugin should address but 
 - Install and enable the plugin using the admin console.
 
 - Most changes can be toggled through the plugin settings page.
+
+- Press `Ctrl+Alt+Shift+F` to temporarily toggle elements hidden by Freemium.
 
 ## Compatibility 📀
 
@@ -95,3 +94,7 @@ A `docker-compose.yaml` file is provided to quickly spin up two (`team` and `ent
 - ### Notes 💡
 
   - This repository is a heavily modded version of the official [mattermost-plugin-starter-template](https://github.com/mattermost/mattermost-plugin-starter-template), to simplify debugging and development.
+
+  - Initially, the idea was to allow custom user CSS branding via a plugin settings text box. However, this was discarded out of respect for the Mattermost team, as they've since implemented this feature in the enterprise edition.
+
+  - To clarify, this plugin is not intended to undermine Mattermost's work. The paid editions are vital to the platform's continued development and to the team behind it. If you can, consider supporting them. Instead, this plugin provides an alternative for those who cannot purchase a paid edition or are restricted by legal or branding requirements.
